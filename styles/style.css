@@ -1,0 +1,693 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    scroll-behavior: smooth;
+}
+
+body {
+    text-align: center;
+}
+
+.wrapper {
+    max-width: 1176px;
+    margin: 0 auto;
+    font-size: 0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1225px) {
+    .wrapper {
+        padding: 0 41px 0 43px;
+        /*Чтобы не приклеивались колонки к краям экрана*/
+    }
+    .our_booking .wrapper {
+        padding: 0 24px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        padding: 0 24px;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color: rgba(32, 83, 80, .5);
+    padding: 30px 0 31px;
+}
+
+header a {
+    color: #FFF;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .065em;
+}
+
+header a:not(:last-child)::after {
+    content: "";
+    margin: 0 45px;
+    display: inline-block;
+    background-color: #FFF;
+    width: 30px;
+    height: 2px;
+    vertical-align: middle;
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: .02em;
+}
+
+section.banner {
+    color: #FFF;
+    background-image: url(../img/main_background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 450px 0 25px;
+}
+
+.banner a:first-of-type {
+    display: block;
+    max-width: 312px;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+.vector::before {
+    content: "";
+    display: inline-block;
+    width: 59px;
+    height: 22px;
+    background-image: url("../icon/vector.svg");
+    margin: 85px auto 0;
+    transition: all .3s;
+}
+
+.vector:hover::before {
+    transform: translateY(5px);
+    opacity: .8;
+}
+
+.description {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.banner .description {
+    font-weight: 400;
+    margin: 30px auto 60px;
+    max-width: 495px;
+    letter-spacing: 0.02em;
+}
+
+.button_style {
+    font-weight: 500;
+    background-color: #AE5F3D;
+    border-radius: 30px;
+    color: #FFF;
+    transition: all .8s;
+}
+
+.button_style:hover {
+    text-decoration: underline;
+    opacity: .9;
+}
+
+.fa-angle-up {
+    font-size: 3rem;
+    color: #bbbbbb;
+    opacity: .6;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    transition: all .3s;
+}
+
+.fa-angle-up:hover {
+    transform: translateY(-5px);
+    opacity: .8;
+}
+
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 2.25rem;
+    }
+    .banner a:first-of-type {
+        max-width: 248px;
+        height: 48px;
+        font-size: .85rem;
+        line-height: 48px;
+    }
+    .banner .description {
+        font-size: .9rem;
+    }
+    .vector::before {
+        margin: 40px auto 0;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    header a {
+        font-size: .9rem;
+    }
+    section.banner {
+        padding-top: 353px;
+    }
+    .banner .description {
+        margin: 20px auto 45px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header a {
+        font-size: .75rem;
+    }
+    section.banner {
+        padding-top: 249px;
+    }
+    .banner .description {
+        margin: 20px auto 35px;
+    }
+    .vector::before {
+        margin: 27px auto 0;
+    }
+}
+
+@media screen and (max-width: 577px) {
+    header {
+        padding: 15px 0;
+    }
+    header a {
+        display: block;
+    }
+    header a:not(:last-child) {
+        margin-bottom: 15px;
+    }
+    header a:not(:last-child)::after {
+        display: none;
+    }
+}
+
+section {
+    padding: 100px 0;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.about_us img {
+    width: 100%;
+    max-width: 617px;
+}
+
+.about_us h2 {
+    margin: 30px 0 37px;
+}
+
+.about_us .description {
+    max-width: 608px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+    h2 {
+        font-size: 1.75rem;
+    }
+    .description {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    section {
+        padding: 80px 0;
+    }
+    section.about_us {
+        padding-bottom: 37px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        padding: 70px 0;
+    }
+    .about_us h2 {
+        margin: 25px 0 32px;
+    }
+}
+
+.background_grey {
+    background-color: #F5F5F5;
+}
+
+.our_entertainments .description {
+    max-width: 520px;
+    margin: 37px auto 30px;
+}
+
+.background_white {
+    background-color: #FFF;
+    border-radius: 30px;
+    font-weight: 300;
+}
+
+.icon {
+    color: #AE5F3D;
+    font-size: 150px;
+}
+
+.our_entertainments h3 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin: 25px 0 20px;
+}
+
+.our_entertainments article {
+    display: inline-block;
+    width: calc((100% - 2*24px)/3);
+    max-width: 444px;
+    font-size: 1rem;
+    padding: 30px 0;
+}
+
+.our_entertainments article:not(:last-child) {
+    margin-right: 24px;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .our_entertainments article {
+        width: calc((100% - 2*20px)/3);
+        font-size: .8rem;
+        padding: 25px 0 22px;
+    }
+    .our_entertainments article:not(:last-child) {
+        margin-right: 20px;
+    }
+    .icon {
+        font-size: 120px;
+    }
+    .our_entertainments h3 {
+        font-size: 1.1rem;
+        margin: 15px 0;
+    }
+}
+
+@media screen and (min-width: 842px) and (max-width: 856px) {
+    .our_entertainments article {
+        font-size: .85rem;
+    }
+}
+
+@media screen and (min-width: 922px) and (max-width: 948px) {
+    .our_entertainments article {
+        font-size: .85rem;
+    }
+}
+
+@media screen and (min-width: 1030px) and (max-width: 1046px) {
+    .our_entertainments article {
+        font-size: 1.05rem;
+    }
+}
+
+@media screen and (min-width: 1130px) and (max-width: 1165px) {
+    .our_entertainments article {
+        font-size: 1.05rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .our_entertainments .description {
+        margin: 32px auto 35px;
+    }
+    .our_entertainments article {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        font-size: 1.15rem;
+        padding: 30px 0 24px;
+    }
+    .our_entertainments article:not(:last-child) {
+        margin: 0 auto 30px;
+    }
+    .our_entertainments h3 {
+        font-size: 1.15rem;
+    }
+}
+
+.our_apartments h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 25px 0 15px;
+}
+
+.our_apartments .description {
+    max-width: 617px;
+    margin: 30px auto 55px;
+}
+
+.our_apartments article::after {
+    width: 132px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, .8);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-align: center;
+    line-height: 30px;
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+.hotel::after {
+    content: "от 7 т.р./сутки";
+}
+
+.cottage::after {
+    content: "от 23 т.р./сутки";
+}
+
+.townhouse::after {
+    content: "от 13 т.р./сутки";
+}
+
+.cottage::before {
+    content: "VIP";
+    width: 50px;
+    height: 50px;
+    background-color: #F24040;
+    border-radius: 50%;
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    color: #FFF;
+    text-align: center;
+    font: 600 .7rem 'Sourse Serif Pro';
+    line-height: 50px;
+}
+
+.our_apartments article {
+    position: relative;
+    display: inline-block;
+    width: calc((100% - 2*48px)/3);
+    max-width: 698px;
+    text-align: left;
+    font-size: .9rem;
+    font-weight: 300;
+    vertical-align: top;
+}
+
+.our_apartments article:not(:last-child) {
+    margin-right: 48px;
+}
+
+.our_apartments img {
+    width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+    .our_apartments article {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+    .our_apartments article:not(:last-child) {
+        margin: 0 auto 75px;
+    }
+    .cottage::before {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        top: -30px;
+        left: -30px;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .our_apartments .description {
+        margin: 30px auto;
+    }
+    .our_apartments article {
+        font-size: 1.15rem;
+    }
+    .our_apartments h3 {
+        margin: 15px 0;
+    }
+    .cottage::before {
+        font-size: .8rem;
+    }
+    .our_apartments article::after {
+        width: 150px;
+        height: 34px;
+        line-height: 34px;
+        font-size: .9rem;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .our_apartments .wrapper {
+        padding: 0 35px;
+        /*Для того, чтобы не "съедался" полями псевдоэлемент VIP*/
+    }
+    .our_apartments .description {
+        margin: 25px auto 30px;
+    }
+    .our_apartments article {
+        font-size: 1.1rem;
+    }
+    .our_apartments article:first-of-type {
+        margin-bottom: 80px;
+    }
+    .our_apartments article:nth-of-type(2) {
+        margin-bottom: 60px;
+    }
+    .our_apartments h3 {
+        margin: 20px 0;
+    }
+    .cottage::before {
+        font-size: .9rem;
+    }
+    .our_apartments article::after {
+        width: 168px;
+        height: 36px;
+        line-height: 36px;
+        font-size: 1rem;
+    }
+}
+
+form {
+    max-width: 1016px;
+    padding: 100px 121px 119px;
+    margin: 0 auto;
+}
+
+.info,
+.type {
+    text-align: left;
+}
+
+.our_booking .description {
+    max-width: 572px;
+    margin: 30px auto 50px;
+}
+
+.info label {
+    font-size: 1.1rem;
+    color: #454545;
+    display: block;
+}
+
+.bottom_intend {
+    margin-bottom: 20px;
+}
+
+.info input {
+    color: #9D9D9D;
+    border-color: #AE5F3D;
+    width: 100%;
+    height: 60px;
+    padding-left: 35px;
+    font-size: 1rem;
+}
+
+.info input:first-of-type,
+.info {
+    margin-bottom: 25px;
+}
+
+.info input:focus {
+    outline-color: #b1b1b1;
+}
+
+.type p {
+    font-size: 1.1rem;
+}
+
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 16px;
+}
+
+.type label {
+    color: #474747;
+    font-size: 1rem;
+}
+
+button {
+    display: block;
+    max-width: 404px;
+    width: 100%;
+    height: 60px;
+    margin: 40px auto 0;
+    font: 1rem Roboto;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+    button {
+        max-width: 324px;
+        height: 48px;
+        font-size: .9rem;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    form {
+        padding: 80px 68px 67px;
+    }
+    .our_booking .description {
+        font-size: 1.1rem;
+        margin: 30px auto;
+    }
+    .info label,
+    .type p {
+        font-size: 1rem;
+    }
+    .info input,
+    .type label {
+        font-size: .9rem;
+    }
+    input[type="radio"] {
+        margin-right: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    form {
+        padding: 70px 52px 53px;
+    }
+    .our_booking .description {
+        font-size: 1.1rem;
+        margin: 25px auto 35px;
+    }
+    .info input:first-of-type {
+        margin-bottom: 20px;
+    }
+    .info label,
+    .type p {
+        font-size: 1.1rem;
+    }
+    .info input,
+    .type label {
+        font-size: 1rem;
+    }
+    input[type="radio"] {
+        margin-right: 13px;
+    }
+}
+
+footer {
+    padding: 70px 0;
+}
+
+footer h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+footer nav {
+    max-width: 150px;
+    border-top: .7px solid #737373;
+    border-bottom: .7px solid #737373;
+    margin: 35px auto;
+    padding: 25px 0;
+}
+
+footer nav a {
+    display: block;
+    color: #000;
+    text-transform: uppercase;
+    font-size: .75rem;
+    font-weight: 500;
+    letter-spacing: .065em;
+}
+
+footer nav a:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.social_networks a {
+    display: inline-block;
+    color: #000;
+    font-size: 28px;
+    transition: transform .4s;
+}
+
+.social_networks a:not(:last-child) {
+    margin-right: 27px;
+}
+
+.social_networks a:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 1024px) {
+    footer {
+        padding: 50px 0;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    footer h3 {
+        font-size: 1.35rem;
+    }
+    footer nav {
+        margin: 25px auto;
+        padding: 20px 0;
+    }
+    footer nav a {
+        font-size: .65rem;
+    }
+    footer nav a:not(:last-child) {
+        margin-bottom: 33px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    footer h3 {
+        font-size: 1.25rem;
+    }
+    footer nav a {
+        font-size: .75rem;
+    }
+    footer nav a:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
